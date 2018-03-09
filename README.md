@@ -12,6 +12,31 @@ Every address gets a starting supply of 100 NoobCoin. NoobCoin is just like a st
 
 The idea here is that if someone messes up... they can simply use a new address and have another 100 NoobCoin. This is also a nice way to get started since the user does not need to go to a faucet. They just need to watch the token in their wallet of choice.
 
+## How to Use?
+
+The easiest example is to simply add to your MetaMask wallet. Follow these instructions:
+
+1. install MetaMask if you don't have: [download here](https://metamask.io/)
+1. click orange fox icon on top right
+1. Go through wallet setup if you haven't done
+1. unlock account
+1. click top left (probably green and says "Main Network")
+1. choose test network (any bu main will do)
+1. click tokens tab midway down the box (next to sent)
+1. click add tokens
+1. enter in address for proper network (see below)
+
+**Network Addresses**
+
+*Choose one of these to see tokens*
+
+Network | Address
+-- | --
+Main | N/A
+Kovan | N/A
+Ropsten | N/A
+Rinkeby | N/A
+
 ## How Does it Work?
 
 NoobCoin works by manually returning an initial balance of 100e18 through the `initialBalance` method. Any further transactions in `transfer` or `transferFrom` are deducted or added using the `spentBalances` and `receivedBalances` mappings. This can be seen here:
