@@ -112,3 +112,13 @@ function transfer(
 ```
 
 As you can see instead of using the `balances` mapping, the updated `balanceOf` is used instead.
+
+## Tests
+
+Tests are written in both solidity and javascript. Tests were not written for any OpenZeppelin code of course :)
+
+To run the tests run:
+
+```
+yarn test
+```
