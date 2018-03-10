@@ -2,7 +2,7 @@
 
 ## What is NoobCoin?
 
-NoobCoin is an ERC20 standard token that everyone owns. It may be useful for, well, noobs to use in order to become comfortable with using ERC20 tokens. It is meant as something that someone can use to practice with before making any mistakes that could be quiet costly when dealing with tokens that have real world value.
+NoobCoin is an ERC20 standard token that everyone owns. It may be useful for, well, noobs to use in order to become comfortable with using ERC20 tokens. It is meant as something that someone can use to practice with before making any mistakes that could be quite costly when dealing with tokens that have real world value.
 
 Every address gets a starting supply of 100 NoobCoin. NoobCoin is just like a standard burnable token. `transfer`s and `transferFrom`s are handled properly and change actual balances.
 
