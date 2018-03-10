@@ -6,7 +6,23 @@ NoobCoin is an ERC20 standard token that everyone owns. It may be useful for, we
 
 Every address gets a starting supply of 100 NoobCoin. NoobCoin is just like a standard burnable token. `transfer`s and `transferFrom`s are handled properly and change actual balances.
 
-`burn`ing is also possible in case someone wants to just get rid of them... this is useful if the user is using something like Parity wallet and the NoobCoin has been registered on the Parity registry.
+`burn`ing is also possible in case someone wants to just get rid of them... this is useful if the user is using something like Parity wallet and the NoobCoin has been registered on the Parity registry. `burn`ing properly requires adding the ABI to your wallet. If you don't want to do this simply send the tokens to `0x0000000000000000000000000000000000000000` ( address(0) ).
+
+### Specifications
+
+Property | Value
+-- | --
+Token Type | ERC20
+TotalSupply | Starts at 0 increases with use
+Decimals | 18
+Name | NoobCoin
+Symbol | NCN
+Kovan Address | 0x8de44bec7fe3b00d6e76e2ef563ef8966c574fc2
+Rinkeby Address | 0xa7879b00c6253bb4d2e75d3a4fbff4071b612a33
+Ropsten Address | 0x10f43a9f7bf14dda0d84dfaaa4d38b4322162948
+Kovan Ethercan Verified Contract | [0x8de44bec7fe3b00d6e76e2ef563ef8966c574fc2](https://kovan.etherscan.io/address/0x8de44bec7fe3b00d6e76e2ef563ef8966c574fc2#code)
+Ropsten Etherscan Verified Contract | [0x10f43a9f7bf14dda0d84dfaaa4d38b4322162948](https://ropsten.etherscan.io/address/0x10f43a9f7bf14dda0d84dfaaa4d38b4322162948#code)
+Rinkeby Etherscan Verified Contract | [0xa7879b00c6253bb4d2e75d3a4fbff4071b612a33](https://rinkeby.etherscan.io/address/0xa7879b00c6253bb4d2e75d3a4fbff4071b612a33#code)
 
 ## Why NoobCoin?
 
@@ -21,10 +37,15 @@ The easiest example is to simply add to your MetaMask wallet. Follow these instr
 1. Go through wallet setup if you haven't done
 1. unlock account
 1. click top left (probably green and says "Main Network")
-1. choose test network (any bu main will do)
+1. choose test network (any bu main will do, if you don't know see "Which Network")
 1. click tokens tab midway down the box (next to sent)
 1. click add tokens
 1. enter in address for proper network (see below)
+1. click add
+1. you should immediately see 100 NCN in your account.
+1. ??? profit?
+
+### Network Addresses
 
 **Network Addresses**
 
@@ -33,9 +54,28 @@ The easiest example is to simply add to your MetaMask wallet. Follow these instr
 Network | Address
 -- | --
 Main | N/A
-Kovan | N/A
-Ropsten | N/A
-Rinkeby | N/A
+Kovan | 0x8de44bec7fe3b00d6e76e2ef563ef8966c574fc2
+Rinkeby | 0xa7879b00c6253bb4d2e75d3a4fbff4071b612a33
+Ropsten | 0x10f43a9f7bf14dda0d84dfaaa4d38b4322162948
+
+### Which Network ?
+
+Any will work that are listed in the table above, but ropsten is probably the easiest if you do not know what you are doing. This is because you can very easily get ropsten ether which you will need in order to make any transactions on the network (remember transactions cost gas!).
+
+In order to get ropsten ether follow these instructions:
+*these directions assume you have followed directions above up until choose test network*
+
+1. open MetaMask
+1. click top left and choose ropsten
+1. click buy (dont worry you wont spend any real money here... its free)
+1. click ropsten test faucet
+1. click request 1 ether from faucet
+1. wait a few minutes
+1. you should now see some ether in your account in the top left area of your MetMask plugin
+
+## How to get Rid of Them?
+
+Simply `transfer` them to `0x0000000000000000000000000000000000000000`
 
 ## How Does it Work?
 
@@ -121,4 +161,360 @@ To run the tests run:
 
 ```
 yarn test
+```
+
+## NoobCoin ABI
+
+In order to properly `burn` tokens, you must add the ABI to whatever wallet you are using. This is meant for people who know what they are doing. If you want to `burn` (get rid of your tokens), you can always send to `0x0000000000000000000000000000000000000000` ( address(0) ) without adding the ABI.
+
+Here is the ABI:
+
+```js
+[
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "receivedBalances",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "name": "_subtractedValue",
+          "type": "uint256"
+        }
+      ],
+      "name": "decreaseApproval",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "spentBalances",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "name": "_addedValue",
+          "type": "uint256"
+        }
+      ],
+      "name": "increaseApproval",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "name": "_spender",
+          "type": "address"
+        }
+      ],
+      "name": "allowance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "burner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Burn",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "burn",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
+```
+
+## Donations
+
+If for some wild reason you want to send me Ether (testnet or real), I won't say no :)
+
+Feel free to send any ether on any network to this address:
+
+```
+0x3aC7c51D964b4afc2FbCeC3C3Ac1b731FB7ECed0
 ```
