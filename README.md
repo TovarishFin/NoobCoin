@@ -17,12 +17,12 @@ TotalSupply | Starts at 0 increases with use
 Decimals | 18
 Name | NoobCoin
 Symbol | NCN
-Kovan Address | 0x8de44bec7fe3b00d6e76e2ef563ef8966c574fc2
-Rinkeby Address | 0xa7879b00c6253bb4d2e75d3a4fbff4071b612a33
-Ropsten Address | 0x10f43a9f7bf14dda0d84dfaaa4d38b4322162948
-Kovan Ethercan Verified Contract | [0x8de44bec7fe3b00d6e76e2ef563ef8966c574fc2](https://kovan.etherscan.io/address/0x8de44bec7fe3b00d6e76e2ef563ef8966c574fc2#code)
-Ropsten Etherscan Verified Contract | [0x10f43a9f7bf14dda0d84dfaaa4d38b4322162948](https://ropsten.etherscan.io/address/0x10f43a9f7bf14dda0d84dfaaa4d38b4322162948#code)
-Rinkeby Etherscan Verified Contract | [0xa7879b00c6253bb4d2e75d3a4fbff4071b612a33](https://rinkeby.etherscan.io/address/0xa7879b00c6253bb4d2e75d3a4fbff4071b612a33#code)
+Kovan Address | 0x4fcf6b547fa5fb39492ebd91ac4c88289c40716e
+Rinkeby Address | 0xd682fedb50f8d895c940bcac39472b0fd10966ab
+Ropsten Address | 0x2f643a2bbdecf3606e8d9d46a7385b7e63bb5eac
+Kovan Ethercan Verified Contract | [0x4fcf6b547fa5fb39492ebd91ac4c88289c40716e](https://kovan.etherscan.io/address/0x4fcf6b547fa5fb39492ebd91ac4c88289c40716e#code)
+Ropsten Etherscan Verified Contract | [0x2f643a2bbdecf3606e8d9d46a7385b7e63bb5eac](https://ropsten.etherscan.io/address/0x2f643a2bbdecf3606e8d9d46a7385b7e63bb5eac#code)
+Rinkeby Etherscan Verified Contract | [0xd682fedb50f8d895c940bcac39472b0fd10966ab](https://rinkeby.etherscan.io/address/0xd682fedb50f8d895c940bcac39472b0fd10966ab#code)
 
 ## Why NoobCoin?
 
@@ -54,9 +54,9 @@ The easiest example is to simply add to your MetaMask wallet. Follow these instr
 Network | Address
 -- | --
 Main | N/A
-Kovan | 0x8de44bec7fe3b00d6e76e2ef563ef8966c574fc2
-Rinkeby | 0xa7879b00c6253bb4d2e75d3a4fbff4071b612a33
-Ropsten | 0x10f43a9f7bf14dda0d84dfaaa4d38b4322162948
+Kovan | 0x4fcf6b547fa5fb39492ebd91ac4c88289c40716e
+Rinkeby | 0xd682fedb50f8d895c940bcac39472b0fd10966ab
+Ropsten | 0x2f643a2bbdecf3606e8d9d46a7385b7e63bb5eac
 
 ### Which Network ?
 
